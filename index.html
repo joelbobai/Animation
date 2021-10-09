@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Joel Animation</title>
+	<link rel="stylesheet" type="text/css" href="ani.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+  <div id="banner">
+  	<div id="drone-box">
+  		<img src="img1.png " class="drone-pic">  		
+  		<img src="img2.png " class="center-pic">
+  	</div>
+  </div>
+
+
+
+
+<script>
+	$('#banner').mousemove(function(e) {
+		var moveX = (e.pageX * -1/2)+300;
+		var moveY = (e.pageY * -1/2)+120;
+		$('#drone-box').css({
+			'transform' : 'translate3d('+moveX+'px, '+moveY+'px,0)'
+		});
+	});
+</script>
+
+
+</body>
+</html>
